@@ -148,8 +148,22 @@ padding: 0 15px;
 
 .address-link-mail:hover {
     color: var(--accent-color);
-
 }
+
+.address-link-mail::before {
+    display: inline-block;
+    content: "";
+    width: 16px;
+    height: 12px;
+    background-image: url(../images/advantages/envelope.svg);
+     background-repeat: no-repeat;
+    background-position: center;
+    justify-content: flex-end;
+    background-size: contain;
+    margin-right: 10px;
+}
+
+
 .address-link-tel {
     font-family: var(--main-font);
     font-style: normal;
@@ -158,22 +172,46 @@ padding: 0 15px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
+
+}
+
+
+.address-link-tel::before {
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    background-image: url(../images/advantages/mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+      
 }
 /*============ END NAVIGATION============*/
 
 /*=========== HERO ==================*/
 
-.hero {
-    background: #2F303A;
+.overlay {
     max-width: 1600px;
     height: 600px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: 
+    linear-gradient(
+        to right, 
+        rgba(47, 48, 58, 0.4), 
+        rgba(47, 48, 58, 0.4)),
+    url(../images/header/header.jpg);
+    background-color:#C4C4C4; 
 }
+
+
 .hero-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 
 .hero-title {
     width: 696px;
@@ -233,7 +271,36 @@ padding: 0 15px;
 
 .advantages-container .item {
     width: 270px;
+    
  }
+
+.advantages-container .item::before {
+    display: block;
+    content: "";
+    height: 120px;
+    background: #F5F4FA;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+    background-position: center;
+ }
+
+
+
+ .item:nth-child(1)::before {
+    background-image: url(../images/advantages/antena.svg);
+}
+
+.item:nth-child(2)::before {
+    background-image: url(../images/advantages/clock.svg);
+}
+.item:nth-child(3)::before {
+    background-image: url(../images/advantages/vector.svg);
+
+}
+.item:nth-child(4):before {
+    background-image: url(../images/advantages/astronaut.svg);
+}
 
 .advantages-container .item + .item {
    width: 270px; 
@@ -376,7 +443,7 @@ padding: 0 15px;
 
 .profession {
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 16px;
     font-family: var(--main-font);
     font-style: 400;
     font-weight: normal;
@@ -387,6 +454,30 @@ padding: 0 15px;
 
     color: var(--primary-text-color);
 }
+/* Social links */
+
+.social-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    
+
+/* .social-list .item + .item {
+    margin-left: 10px;
+} */
+
+/* .icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    outline: 1px solid ;
+    fill: #FFFFFF;
+}
+.icon:hover,
+.icon:focus {
+    color: #2196F3;
+} */
+
 
 /*======== END OUR TEAM=======*/
 
