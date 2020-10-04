@@ -128,7 +128,8 @@ padding: 0 15px;
 .navigation-list-link:hover,
 .navigation-list-link:focus,
 .address-link-mail:hover,
-.address-link-mail:focus {
+.address-link-mail:focus,
+.address-link-tel:hover  {
     color: var(--accent-color);
 }
 
@@ -136,57 +137,35 @@ padding: 0 15px;
     display: flex;
 }
 
-.address-link-mail {
+.address-link-mail,
+.address-link-tel {
+    /* display: flex; */
     font-family: var(--main-font);
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14px;
     letter-spacing: 0.02em;
-    color: #212121;
+    color: var(--primary-text-color);
     }
 
-.address-link-mail:hover {
-    color: var(--accent-color);
+.address .item:hover {
+    fill: var(--accent-color);
 }
 
-.address-link-mail::before {
-    display: inline-block;
-    content: "";
-    width: 16px;
-    height: 12px;
-    background-image: url(../images/advantages/envelope.svg);
-     background-repeat: no-repeat;
-    background-position: center;
-    justify-content: flex-end;
-    background-size: contain;
+.address .icon-envel{
     margin-right: 10px;
-}
-
-
-.address-link-tel {
-    font-family: var(--main-font);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: var(--primary-text-color);
 
 }
 
-
-.address-link-tel::before {
-    display: inline-block;
-    content: "";
-    width: 10px;
-    height: 16px;
-    margin-right: 10px;
-    background-image: url(../images/advantages/mobile.svg);
-    background-repeat: no-repeat;
-    background-size: cover; 
-      
+.address.icon-tel {
+    fill: #757575
 }
+
+
+
+
+
 /*============ END NAVIGATION============*/
 
 /*=========== HERO ==================*/
@@ -461,22 +440,37 @@ padding: 0 15px;
     justify-content: center;
     margin-bottom: 30px;
     
-
-/* .social-list .item + .item {
-    margin-left: 10px;
-} */
-
-/* .icon {
+}
+.social-list .link {
+    display: flex;
     width: 44px;
-    height: 44px;
+    height: 44px; 
     border-radius: 50%;
-    outline: 1px solid ;
+    /* background-color: #FFFFFF; */
+    justify-content: center;
+    align-items: center;
+}
+.social-list .item + .item {
+    margin-left: 10px;
+}
+
+.social-list .icon {
+    width: 20px;
+    height: 20px;
+    fill: #AFB1B8;
+    cursor: pointer;
+   
+}
+.social-list .link:hover {
+    background-color: var(--accent-color);
+    
+}
+.social-list .link:hover .icon{
     fill: #FFFFFF;
 }
-.icon:hover,
-.icon:focus {
-    color: #2196F3;
-} */
+
+
+
 
 
 /*======== END OUR TEAM=======*/
